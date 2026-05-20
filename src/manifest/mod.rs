@@ -706,6 +706,10 @@ impl CrateData {
             }
         }
 
+        if out_dir.join("snippets").is_dir() {
+            files.push("snippets".to_owned());
+        }
+
         NpmData {
             name: npm_name,
             dts_file,
